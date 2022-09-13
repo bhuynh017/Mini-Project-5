@@ -1,2 +1,8 @@
-var time = moment().format("MMM-DD-YYYY hh:mm:ss");
-$("#1a").text(time);
+var timePTag = $("#time-p");
+
+function keepCurrentTime () {
+    var time = setInterval(function() {
+       timePTag.text(moment().format("MMM-DD-YYYY [at] hh:mm:ss"))
+    })
+}
+
